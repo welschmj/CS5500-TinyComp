@@ -1,0 +1,93 @@
+\hypertarget{class_memory}{}\section{Memory Class Reference}
+\label{class_memory}\index{Memory@{Memory}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_memory_ab07133625f6fc3ef7e094768896ed2fb}{store} (void $\ast$val, int width)
+\item 
+void $\ast$ \hyperlink{class_memory_afbe4f8f6d315e8663a164eb2c44b2def}{retrieve} (int offset)
+\item 
+\hyperlink{class_temp_address}{Temp\+Address} $\ast$ \hyperlink{class_memory_ad04d1a36f88c219d7447c10c098e4530}{get\+New\+Temp} (int width)
+\item 
+void \hyperlink{class_memory_a49ce489fcc012c09284dcc8c1bc4d52b}{hexdump} ()
+\item 
+void \hyperlink{class_memory_a2f0418e16871271c242acf67894ffa1c}{print\+Out} (\hyperlink{class_sym_tbl}{Sym\+Tbl} $\ast$tbl)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_memory}{Memory} \& \hyperlink{class_memory_a96eac3970b3baba973645a9cc32aee4c}{get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_memory_a1f45f0eb9259f5c73cdbb1190212315f}{M\+E\+M\+S\+I\+ZE} = 128
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simplified abstraction for the memory allocated to the compiler. 
+
+\subsection{Member Function Documentation}
+\index{Memory@{Memory}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{get\+Instance()}{getInstance()}}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Memory}\& Memory\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_memory_a96eac3970b3baba973645a9cc32aee4c}{}\label{class_memory_a96eac3970b3baba973645a9cc32aee4c}
+As \hyperlink{class_memory}{Memory} is implemented as a singleton, its constructor is private. This method is the only way to obtain an instance of \hyperlink{class_memory}{Memory}. It is guaranteed that it will return always the same instance. \index{Memory@{Memory}!get\+New\+Temp@{get\+New\+Temp}}
+\index{get\+New\+Temp@{get\+New\+Temp}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{get\+New\+Temp(int width)}{getNewTemp(int width)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Temp\+Address}$\ast$ Memory\+::get\+New\+Temp (
+\begin{DoxyParamCaption}
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{class_memory_ad04d1a36f88c219d7447c10c098e4530}{}\label{class_memory_ad04d1a36f88c219d7447c10c098e4530}
+Returns a new temporary address pointing to the first location of available memory Since we would later need to advance the offset anyway, this methods takes care of this; that\textquotesingle{}s why we pass the width of what we\textquotesingle{}re gonna store in that location.
+
+It returns the {\itshape beginning} address of the value to be stored therein (i.\+e. the address of the temporary) \index{Memory@{Memory}!hexdump@{hexdump}}
+\index{hexdump@{hexdump}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{hexdump()}{hexdump()}}]{\setlength{\rightskip}{0pt plus 5cm}void Memory\+::hexdump (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_memory_a49ce489fcc012c09284dcc8c1bc4d52b}{}\label{class_memory_a49ce489fcc012c09284dcc8c1bc4d52b}
+Prints out a dump of the memory. It prints the content of each memory location in hex format. Not very useful for you, since the memory will be filled only at runtime, but included for completeness. \index{Memory@{Memory}!print\+Out@{print\+Out}}
+\index{print\+Out@{print\+Out}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{print\+Out(\+Sym\+Tbl $\ast$tbl)}{printOut(SymTbl *tbl)}}]{\setlength{\rightskip}{0pt plus 5cm}void Memory\+::print\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Sym\+Tbl} $\ast$}]{tbl}
+\end{DoxyParamCaption}
+)}\hypertarget{class_memory_a2f0418e16871271c242acf67894ffa1c}{}\label{class_memory_a2f0418e16871271c242acf67894ffa1c}
+Prints out a logical view of the memory \index{Memory@{Memory}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{retrieve(int offset)}{retrieve(int offset)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Memory\+::retrieve (
+\begin{DoxyParamCaption}
+\item[{int}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{class_memory_afbe4f8f6d315e8663a164eb2c44b2def}{}\label{class_memory_afbe4f8f6d315e8663a164eb2c44b2def}
+Returns the {\itshape beginning} address of some value, supposedly stored in memory. Note that we have no clue about the type of such value, or it\textquotesingle{}s width. They must be \char`\"{}computed/retrieved\char`\"{} externally. \index{Memory@{Memory}!store@{store}}
+\index{store@{store}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{store(void $\ast$val, int width)}{store(void *val, int width)}}]{\setlength{\rightskip}{0pt plus 5cm}int Memory\+::store (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{val, }
+\item[{int}]{width}
+\end{DoxyParamCaption}
+)}\hypertarget{class_memory_ab07133625f6fc3ef7e094768896ed2fb}{}\label{class_memory_ab07133625f6fc3ef7e094768896ed2fb}
+Store the bytes pointed to by val in memory. Note that we don\textquotesingle{}t pass the type of the variable to be stored, as this has no relevance for the memory.
+
+Returns the {\itshape beginning} address of the value just stored. 
+
+\subsection{Field Documentation}
+\index{Memory@{Memory}!M\+E\+M\+S\+I\+ZE@{M\+E\+M\+S\+I\+ZE}}
+\index{M\+E\+M\+S\+I\+ZE@{M\+E\+M\+S\+I\+ZE}!Memory@{Memory}}
+\subsubsection[{\texorpdfstring{M\+E\+M\+S\+I\+ZE}{MEMSIZE}}]{\setlength{\rightskip}{0pt plus 5cm}const int Memory\+::\+M\+E\+M\+S\+I\+ZE = 128\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_memory_a1f45f0eb9259f5c73cdbb1190212315f}{}\label{class_memory_a1f45f0eb9259f5c73cdbb1190212315f}
+The size of our memory in bytes. It\textquotesingle{}s set to a very small value to keep visualization of the memory dump clean. Increase as needed. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

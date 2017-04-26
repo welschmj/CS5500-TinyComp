@@ -1,0 +1,21 @@
+int a,c;
+float b;
+
+stat;
+while(a=c) {
+  stat;
+  while(a==c)
+  {
+    stat;
+    while(a==c)
+    {
+      stat;
+      while(a==c)
+      {
+        stat;
+      };
+    };
+  };
+  a := 3;
+  stat;
+};

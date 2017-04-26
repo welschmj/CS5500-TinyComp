@@ -1,0 +1,99 @@
+\hypertarget{class_target_code}{}\section{Target\+Code Class Reference}
+\label{class_target_code}\index{Target\+Code@{Target\+Code}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_target_code_ac5d1d427ace51cd109c586279543db80}{Target\+Code} ()
+\item 
+\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ \hyperlink{class_target_code_a4071467d8e74b5eaf495375cb3e4e2c0}{get\+Instr} (int i)
+\item 
+int \hyperlink{class_target_code_af38db8dcd404aab0757238b8634a2dbf}{get\+Next\+Instr} ()
+\item 
+\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ \hyperlink{class_target_code_a04e3ad62e9ead1c9237f1ba0d90e7b83}{gen} (\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{opr\+Enum} op, \hyperlink{class_address}{Address} $\ast$operand1, \hyperlink{class_address}{Address} $\ast$operand2)
+\item 
+\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ \hyperlink{class_target_code_aff3458f28e2175256063869c4ee688f6}{gen} (\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{opr\+Enum} op, \hyperlink{class_address}{Address} $\ast$operand1, \hyperlink{class_address}{Address} $\ast$operand2, \hyperlink{class_address}{Address} $\ast$operand3)
+\item 
+void \hyperlink{class_target_code_a8930a15f8287301265e46ba5dc5d6fe0}{backpatch} (list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ gotolist, \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$instr)
+\item 
+void \hyperlink{class_target_code_a252a90959cffeeff1c93cfb3e47c5ab9}{print\+Out} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A simplified abstraction for representing our target code. Following the textbook, I\textquotesingle{}m using 3-\/addr code instructions and storing them in an actual array. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Target\+Code@{Target\+Code}!Target\+Code@{Target\+Code}}
+\index{Target\+Code@{Target\+Code}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{Target\+Code()}{TargetCode()}}]{\setlength{\rightskip}{0pt plus 5cm}Target\+Code\+::\+Target\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_ac5d1d427ace51cd109c586279543db80}{}\label{class_target_code_ac5d1d427ace51cd109c586279543db80}
+Basic constructor; it will initialize the internal array of \hyperlink{class_tac_instr}{Tac\+Instr} instructions 
+
+\subsection{Member Function Documentation}
+\index{Target\+Code@{Target\+Code}!backpatch@{backpatch}}
+\index{backpatch@{backpatch}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{backpatch(list$<$ Tac\+Instr $\ast$ $>$ gotolist, Tac\+Instr $\ast$instr)}{backpatch(list< TacInstr * > gotolist, TacInstr *instr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Target\+Code\+::backpatch (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf Tac\+Instr} $\ast$ $>$}]{gotolist, }
+\item[{{\bf Tac\+Instr} $\ast$}]{instr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_a8930a15f8287301265e46ba5dc5d6fe0}{}\label{class_target_code_a8930a15f8287301265e46ba5dc5d6fe0}
+Implementation of \char`\"{}backpatch()\char`\"{} from the textbook. 
+\begin{DoxyParams}{Parameters}
+{\em gotolist} & a list of \hyperlink{class_tac_instr}{Tac\+Instr}; each one is assumed to be a \char`\"{}goto\char`\"{}-\/like instruction \\
+\hline
+{\em instr} & the \hyperlink{class_address}{Address} of the instruction (i.\+e. \hyperlink{class_tac_instr}{Tac\+Instr}) to be patched in the goto\textquotesingle{}s in the list \\
+\hline
+\end{DoxyParams}
+\index{Target\+Code@{Target\+Code}!gen@{gen}}
+\index{gen@{gen}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{gen(opr\+Enum op, Address $\ast$operand1, Address $\ast$operand2)}{gen(oprEnum op, Address *operand1, Address *operand2)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tac\+Instr}$\ast$ Target\+Code\+::gen (
+\begin{DoxyParamCaption}
+\item[{{\bf opr\+Enum}}]{op, }
+\item[{{\bf Address} $\ast$}]{operand1, }
+\item[{{\bf Address} $\ast$}]{operand2}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_a04e3ad62e9ead1c9237f1ba0d90e7b83}{}\label{class_target_code_a04e3ad62e9ead1c9237f1ba0d90e7b83}
+Implementation of \char`\"{}gen()\char`\"{} from the textbook. Basically, if generates a new \hyperlink{class_tac_instr}{Tac\+Instr} with the given parameters, and stores it in the next available place in the code array \index{Target\+Code@{Target\+Code}!gen@{gen}}
+\index{gen@{gen}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{gen(opr\+Enum op, Address $\ast$operand1, Address $\ast$operand2, Address $\ast$operand3)}{gen(oprEnum op, Address *operand1, Address *operand2, Address *operand3)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tac\+Instr}$\ast$ Target\+Code\+::gen (
+\begin{DoxyParamCaption}
+\item[{{\bf opr\+Enum}}]{op, }
+\item[{{\bf Address} $\ast$}]{operand1, }
+\item[{{\bf Address} $\ast$}]{operand2, }
+\item[{{\bf Address} $\ast$}]{operand3}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_aff3458f28e2175256063869c4ee688f6}{}\label{class_target_code_aff3458f28e2175256063869c4ee688f6}
+Implementation of \char`\"{}gen()\char`\"{} from the textbook. Basically, if generates a new \hyperlink{class_tac_instr}{Tac\+Instr} with the given parameters, and stores it in the next available place in the code array This version accounts for using temporaries. \index{Target\+Code@{Target\+Code}!get\+Instr@{get\+Instr}}
+\index{get\+Instr@{get\+Instr}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{get\+Instr(int i)}{getInstr(int i)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tac\+Instr}$\ast$ Target\+Code\+::get\+Instr (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_a4071467d8e74b5eaf495375cb3e4e2c0}{}\label{class_target_code_a4071467d8e74b5eaf495375cb3e4e2c0}
+Returns the instruction stored at index i in the code array \index{Target\+Code@{Target\+Code}!get\+Next\+Instr@{get\+Next\+Instr}}
+\index{get\+Next\+Instr@{get\+Next\+Instr}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{get\+Next\+Instr()}{getNextInstr()}}]{\setlength{\rightskip}{0pt plus 5cm}int Target\+Code\+::get\+Next\+Instr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_af38db8dcd404aab0757238b8634a2dbf}{}\label{class_target_code_af38db8dcd404aab0757238b8634a2dbf}
+Implementation of \char`\"{}nextinstr\char`\"{} from the textbook \index{Target\+Code@{Target\+Code}!print\+Out@{print\+Out}}
+\index{print\+Out@{print\+Out}!Target\+Code@{Target\+Code}}
+\subsubsection[{\texorpdfstring{print\+Out()}{printOut()}}]{\setlength{\rightskip}{0pt plus 5cm}void Target\+Code\+::print\+Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_target_code_a252a90959cffeeff1c93cfb3e47c5ab9}{}\label{class_target_code_a252a90959cffeeff1c93cfb3e47c5ab9}
+A convenience method to print out the entire code array 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

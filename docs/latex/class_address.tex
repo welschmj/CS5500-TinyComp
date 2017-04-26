@@ -1,0 +1,60 @@
+\hypertarget{class_address}{}\section{Address Class Reference}
+\label{class_address}\index{Address@{Address}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Address\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_address}
+\end{center}
+\end{figure}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const char $\ast$ \hyperlink{class_address_ac58183c3d3dc7c3e98a17825dd086de1}{to\+String} () const =0
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{class_address_a97ca8ad46cb9b316e2ff08e163457ca6}{operator$<$$<$} (std\+::ostream \&, const \hyperlink{class_address}{Address} $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A generic address for 3-\/addr code instructions. This can be\+:
+\begin{DoxyItemize}
+\item a constant
+\item a variable (from the symbol table)
+\item the address of an instruction (the famous valuenumber) 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{Address@{Address}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Address@{Address}}
+\subsubsection[{\texorpdfstring{to\+String() const =0}{toString() const =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const char$\ast$ Address\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\hypertarget{class_address_ac58183c3d3dc7c3e98a17825dd086de1}{}\label{class_address_ac58183c3d3dc7c3e98a17825dd086de1}
+Abstract method for printing an \hyperlink{class_address}{Address}. Note that \hyperlink{class_address_ac58183c3d3dc7c3e98a17825dd086de1}{to\+String()} {\itshape must} be defined in derived classes. 
+
+Implemented in \hyperlink{class_instr_address_a4cf3f82f491d6bc401008d93ced13b17}{Instr\+Address}, \hyperlink{class_temp_address_a553ea130e6d932490fedc2da9cdb87b6}{Temp\+Address}, \hyperlink{class_var_address_abadfe890b239f9dcc5ae5bbe31626d49}{Var\+Address}, and \hyperlink{class_const_address_ae5c661e2c7033c192d493d8345ea6c75}{Const\+Address}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\index{Address@{Address}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Address@{Address}}
+\subsubsection[{\texorpdfstring{operator$<$$<$}{operator<<}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{, }
+\item[{const {\bf Address} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}\hypertarget{class_address_a97ca8ad46cb9b316e2ff08e163457ca6}{}\label{class_address_a97ca8ad46cb9b316e2ff08e163457ca6}
+Overloading of the $<$$<$ operator. It will print the \hyperlink{class_address}{Address} by way of the \hyperlink{class_address_ac58183c3d3dc7c3e98a17825dd086de1}{to\+String()} method 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

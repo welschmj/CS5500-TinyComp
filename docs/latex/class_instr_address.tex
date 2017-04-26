@@ -1,0 +1,63 @@
+\hypertarget{class_instr_address}{}\section{Instr\+Address Class Reference}
+\label{class_instr_address}\index{Instr\+Address@{Instr\+Address}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Instr\+Address\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_instr_address}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_instr_address_a966c221ee738631ef72bdf7d2bcb2771}{Instr\+Address} (int vn)
+\item 
+const char $\ast$ \hyperlink{class_instr_address_a4cf3f82f491d6bc401008d93ced13b17}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \hyperlink{class_instr_address}{Instr\+Address} $\ast$)\hypertarget{class_instr_address_aa218b6426f449d15a282b4ba5d3c07c3}{}\label{class_instr_address_aa218b6426f449d15a282b4ba5d3c07c3}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A specialization of \hyperlink{class_address}{Address} to hold an instruction. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Instr\+Address@{Instr\+Address}!Instr\+Address@{Instr\+Address}}
+\index{Instr\+Address@{Instr\+Address}!Instr\+Address@{Instr\+Address}}
+\subsubsection[{\texorpdfstring{Instr\+Address(int vn)}{InstrAddress(int vn)}}]{\setlength{\rightskip}{0pt plus 5cm}Instr\+Address\+::\+Instr\+Address (
+\begin{DoxyParamCaption}
+\item[{int}]{vn}
+\end{DoxyParamCaption}
+)}\hypertarget{class_instr_address_a966c221ee738631ef72bdf7d2bcb2771}{}\label{class_instr_address_a966c221ee738631ef72bdf7d2bcb2771}
+Constructor to initialize an \hyperlink{class_instr_address}{Instr\+Address} from an index of the array code. 
+\begin{DoxyParams}{Parameters}
+{\em vn} & The index of the \hyperlink{class_target_code}{Target\+Code} array, representing a valuenumber. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Instr\+Address@{Instr\+Address}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Instr\+Address@{Instr\+Address}}
+\subsubsection[{\texorpdfstring{to\+String() const }{toString() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Instr\+Address\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_instr_address_a4cf3f82f491d6bc401008d93ced13b17}{}\label{class_instr_address_a4cf3f82f491d6bc401008d93ced13b17}
+Abstract method for printing an \hyperlink{class_address}{Address}. Note that \hyperlink{class_instr_address_a4cf3f82f491d6bc401008d93ced13b17}{to\+String()} {\itshape must} be defined in derived classes. 
+
+Implements \hyperlink{class_address_ac58183c3d3dc7c3e98a17825dd086de1}{Address}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

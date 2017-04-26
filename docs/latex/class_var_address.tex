@@ -1,0 +1,81 @@
+\hypertarget{class_var_address}{}\section{Var\+Address Class Reference}
+\label{class_var_address}\index{Var\+Address@{Var\+Address}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Var\+Address\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_var_address}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_var_address_ac99b3b4bc40e6dc1a4f0dede68d858cf}{Var\+Address} (char v, \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} t, int offset)
+\item 
+\hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} \hyperlink{class_var_address_a01ec05b9f9e33978980d6ad676154a91}{get\+Type} ()
+\item 
+int \hyperlink{class_var_address_aa3b8cd6699634ac705fc2dea982e0b87}{get\+Width} ()
+\item 
+int \hyperlink{class_var_address_a825ed81c1a17b3d374999f0457a35a48}{get\+Offset} ()
+\item 
+const char $\ast$ \hyperlink{class_var_address_abadfe890b239f9dcc5ae5bbe31626d49}{to\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A specialization of \hyperlink{class_address}{Address} to hold a variable 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Var\+Address@{Var\+Address}!Var\+Address@{Var\+Address}}
+\index{Var\+Address@{Var\+Address}!Var\+Address@{Var\+Address}}
+\subsubsection[{\texorpdfstring{Var\+Address(char v, type\+Name t, int offset)}{VarAddress(char v, typeName t, int offset)}}]{\setlength{\rightskip}{0pt plus 5cm}Var\+Address\+::\+Var\+Address (
+\begin{DoxyParamCaption}
+\item[{char}]{v, }
+\item[{{\bf type\+Name}}]{t, }
+\item[{int}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{class_var_address_ac99b3b4bc40e6dc1a4f0dede68d858cf}{}\label{class_var_address_ac99b3b4bc40e6dc1a4f0dede68d858cf}
+Constructor\+: creates a variable address from its id (assuming only 1-\/char id\textquotesingle{}s). 
+
+\subsection{Member Function Documentation}
+\index{Var\+Address@{Var\+Address}!get\+Offset@{get\+Offset}}
+\index{get\+Offset@{get\+Offset}!Var\+Address@{Var\+Address}}
+\subsubsection[{\texorpdfstring{get\+Offset()}{getOffset()}}]{\setlength{\rightskip}{0pt plus 5cm}int Var\+Address\+::get\+Offset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_var_address_a825ed81c1a17b3d374999f0457a35a48}{}\label{class_var_address_a825ed81c1a17b3d374999f0457a35a48}
+Returns the pointer to the memory location holding the variable\textquotesingle{}s value \index{Var\+Address@{Var\+Address}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Var\+Address@{Var\+Address}}
+\subsubsection[{\texorpdfstring{get\+Type()}{getType()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf type\+Name} Var\+Address\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_var_address_a01ec05b9f9e33978980d6ad676154a91}{}\label{class_var_address_a01ec05b9f9e33978980d6ad676154a91}
+Returns the variable\textquotesingle{}s type (as a type\+Name enum) \index{Var\+Address@{Var\+Address}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Var\+Address@{Var\+Address}}
+\subsubsection[{\texorpdfstring{get\+Width()}{getWidth()}}]{\setlength{\rightskip}{0pt plus 5cm}int Var\+Address\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_var_address_aa3b8cd6699634ac705fc2dea982e0b87}{}\label{class_var_address_aa3b8cd6699634ac705fc2dea982e0b87}
+Returns the variable\textquotesingle{}s width, which depends on its type \index{Var\+Address@{Var\+Address}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Var\+Address@{Var\+Address}}
+\subsubsection[{\texorpdfstring{to\+String() const }{toString() const }}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Var\+Address\+::to\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_var_address_abadfe890b239f9dcc5ae5bbe31626d49}{}\label{class_var_address_abadfe890b239f9dcc5ae5bbe31626d49}
+Concrete method for printing a \hyperlink{class_var_address}{Var\+Address}; it\textquotesingle{}s a concrete implementation of the corresponding abstract method in \hyperlink{class_address}{Address} 
+
+Implements \hyperlink{class_address_ac58183c3d3dc7c3e98a17825dd086de1}{Address}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

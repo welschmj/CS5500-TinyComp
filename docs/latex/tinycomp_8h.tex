@@ -1,0 +1,95 @@
+\hypertarget{tinycomp_8h}{}\section{tinycomp.\+h File Reference}
+\label{tinycomp_8h}\index{tinycomp.\+h@{tinycomp.\+h}}
+
+
+This header file contains the definitions that must be shared between flex, bison, and the support code.  
+
+
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfraction}{fraction}
+\item 
+class \hyperlink{class_attribute}{Attribute}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} \{ \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bca9141d27e9f536d86b3fe96734107bb1f}{int\+Type}, 
+\hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bcaf3dc8496c1283a092729d6ce1073bc8a}{float\+Type}, 
+{\bfseries fraction\+Type}
+ \}
+\item 
+enum \hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{opr\+Enum} \{ \\*
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccae9609c8f75169fb851505584b51d0702}{U\+N\+K\+N\+O\+W\+N\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca9ca42e1cdb09d5b9aebd48645a38ac2b}{halt\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca08e29344d1e6daec5dc74d67d75f7992}{copy\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccacd7e2d55db7d186b0d37814e57f79c88}{add\+Opr}, 
+\\*
+{\bfseries mul\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca7a4cd7ce369eeccc7271b950c984b528}{div\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca1ea2304a08a16a33700e86c4f13a69b7}{index\+Copy\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca994150a4971bf26010336b2cdc73d0a6}{offset\+Opr}, 
+\\*
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca76f47ddb50665a12d1dc67a1093e993c}{jmp\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccad445b0051ac3cd13fba3a3aed1b796e6}{eq1cond\+Jmp\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca339df0491c20ede3dd0e43ddb9786e64}{eq2cond\+Jmp\+Opr}, 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccadf70a4cfb045cb8486cec6bde50affb4}{fake\+Opr}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This header file contains the definitions that must be shared between flex, bison, and the support code. 
+
+\begin{DoxyAuthor}{Author}
+Marco Ortolani 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+3/13/2017 
+\end{DoxyDate}
+
+
+\subsection{Enumeration Type Documentation}
+\index{tinycomp.\+h@{tinycomp.\+h}!opr\+Enum@{opr\+Enum}}
+\index{opr\+Enum@{opr\+Enum}!tinycomp.\+h@{tinycomp.\+h}}
+\subsubsection[{\texorpdfstring{opr\+Enum}{oprEnum}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf opr\+Enum}}\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}
+Enums for 3-\/addr code -\/ operators \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{U\+N\+K\+N\+O\+W\+N\+Opr@{U\+N\+K\+N\+O\+W\+N\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!U\+N\+K\+N\+O\+W\+N\+Opr@{U\+N\+K\+N\+O\+W\+N\+Opr}}\item[{\em 
+U\+N\+K\+N\+O\+W\+N\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccae9609c8f75169fb851505584b51d0702}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccae9609c8f75169fb851505584b51d0702}
+}]this is the default, for an unknown operator (it should not occur) \index{halt\+Opr@{halt\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!halt\+Opr@{halt\+Opr}}\item[{\em 
+halt\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca9ca42e1cdb09d5b9aebd48645a38ac2b}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca9ca42e1cdb09d5b9aebd48645a38ac2b}
+}]return control to the operating system \index{copy\+Opr@{copy\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!copy\+Opr@{copy\+Opr}}\item[{\em 
+copy\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca08e29344d1e6daec5dc74d67d75f7992}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca08e29344d1e6daec5dc74d67d75f7992}
+}]the assignment operator \index{add\+Opr@{add\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!add\+Opr@{add\+Opr}}\item[{\em 
+add\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccacd7e2d55db7d186b0d37814e57f79c88}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccacd7e2d55db7d186b0d37814e57f79c88}
+}]the addition operator \index{div\+Opr@{div\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!div\+Opr@{div\+Opr}}\item[{\em 
+div\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca7a4cd7ce369eeccc7271b950c984b528}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca7a4cd7ce369eeccc7271b950c984b528}
+}]the multiplication operator \index{index\+Copy\+Opr@{index\+Copy\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!index\+Copy\+Opr@{index\+Copy\+Opr}}\item[{\em 
+index\+Copy\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca1ea2304a08a16a33700e86c4f13a69b7}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca1ea2304a08a16a33700e86c4f13a69b7}
+}]the indexed copy operator x\mbox{[}i\mbox{]} = y \index{offset\+Opr@{offset\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!offset\+Opr@{offset\+Opr}}\item[{\em 
+offset\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca994150a4971bf26010336b2cdc73d0a6}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca994150a4971bf26010336b2cdc73d0a6}
+}]the displacement operator x = y\mbox{[}i\mbox{]} \index{jmp\+Opr@{jmp\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!jmp\+Opr@{jmp\+Opr}}\item[{\em 
+jmp\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca76f47ddb50665a12d1dc67a1093e993c}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca76f47ddb50665a12d1dc67a1093e993c}
+}]unconditional jump; the goto operator \index{eq1cond\+Jmp\+Opr@{eq1cond\+Jmp\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!eq1cond\+Jmp\+Opr@{eq1cond\+Jmp\+Opr}}\item[{\em 
+eq1cond\+Jmp\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccad445b0051ac3cd13fba3a3aed1b796e6}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccad445b0051ac3cd13fba3a3aed1b796e6}
+}]== operator \index{eq2cond\+Jmp\+Opr@{eq2cond\+Jmp\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!eq2cond\+Jmp\+Opr@{eq2cond\+Jmp\+Opr}}\item[{\em 
+eq2cond\+Jmp\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca339df0491c20ede3dd0e43ddb9786e64}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cca339df0491c20ede3dd0e43ddb9786e64}
+}]= operator \index{fake\+Opr@{fake\+Opr}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!fake\+Opr@{fake\+Opr}}\item[{\em 
+fake\+Opr\hypertarget{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccadf70a4cfb045cb8486cec6bde50affb4}{}\label{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20ccadf70a4cfb045cb8486cec6bde50affb4}
+}]a temporary \char`\"{}fake\char`\"{} operator for simulating the ones yet-\/to-\/be implemented \end{description}
+\end{Desc}
+\index{tinycomp.\+h@{tinycomp.\+h}!type\+Name@{type\+Name}}
+\index{type\+Name@{type\+Name}!tinycomp.\+h@{tinycomp.\+h}}
+\subsubsection[{\texorpdfstring{type\+Name}{typeName}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf type\+Name}}\hypertarget{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{}\label{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}
+Type system; each native data type is stored as a value in this enumeration. Note that for structured types we need a more complex structure; also, I am not explicitly accounting for a type hierarchy here. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{int\+Type@{int\+Type}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!int\+Type@{int\+Type}}\item[{\em 
+int\+Type\hypertarget{tinycomp_8h_aca554671f4620139c1393f96d2af74bca9141d27e9f536d86b3fe96734107bb1f}{}\label{tinycomp_8h_aca554671f4620139c1393f96d2af74bca9141d27e9f536d86b3fe96734107bb1f}
+}]integer type \index{float\+Type@{float\+Type}!tinycomp.\+h@{tinycomp.\+h}}\index{tinycomp.\+h@{tinycomp.\+h}!float\+Type@{float\+Type}}\item[{\em 
+float\+Type\hypertarget{tinycomp_8h_aca554671f4620139c1393f96d2af74bcaf3dc8496c1283a092729d6ce1073bc8a}{}\label{tinycomp_8h_aca554671f4620139c1393f96d2af74bcaf3dc8496c1283a092729d6ce1073bc8a}
+}]floating point type \end{description}
+\end{Desc}

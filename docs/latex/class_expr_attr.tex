@@ -1,0 +1,88 @@
+\hypertarget{class_expr_attr}{}\section{Expr\+Attr Class Reference}
+\label{class_expr_attr}\index{Expr\+Attr@{Expr\+Attr}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Expr\+Attr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_expr_attr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_expr_attr_a9c7b01b5546a7ad4550915b2004bd10a}{Expr\+Attr} (\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$addr, \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} type)
+\item 
+\hyperlink{class_expr_attr_a7362196f3e62587f89134e23b8ee40fc}{Expr\+Attr} (\hyperlink{class_var_address}{Var\+Address} $\ast$addr)
+\item 
+\hyperlink{class_expr_attr_af2cb2432b6971074b082934a1065aaa0}{Expr\+Attr} (\hyperlink{class_const_address}{Const\+Address} $\ast$addr)
+\item 
+\hyperlink{class_expr_attr_a61e2a36f551af4024b31c58b1185d7d2}{Expr\+Attr} (\hyperlink{class_temp_address}{Temp\+Address} $\ast$addr, \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} type)
+\item 
+\hyperlink{class_address}{Address} $\ast$ \hyperlink{class_expr_attr_aec4263aec2979831b898773b0910bc95}{get\+Addr} ()
+\item 
+\hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} \hyperlink{class_expr_attr_a17c309d7036192a6d15ebe3388dc0f34}{get\+Type} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of attribute for grammar symbol expr\+: arithmetic expressions
+\begin{DoxyItemize}
+\item E.\+addr 
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\subsubsection[{\texorpdfstring{Expr\+Attr(\+Tac\+Instr $\ast$addr, type\+Name type)}{ExprAttr(TacInstr *addr, typeName type)}}]{\setlength{\rightskip}{0pt plus 5cm}Expr\+Attr\+::\+Expr\+Attr (
+\begin{DoxyParamCaption}
+\item[{{\bf Tac\+Instr} $\ast$}]{addr, }
+\item[{{\bf type\+Name}}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expr_attr_a9c7b01b5546a7ad4550915b2004bd10a}{}\label{class_expr_attr_a9c7b01b5546a7ad4550915b2004bd10a}
+Constructor for \hyperlink{class_expr_attr}{Expr\+Attr}; it will refer to the \hyperlink{class_address}{Address} (valuenumber) of the instruction that (when executed) will contain the result of the entire expression. It needs to know (and store) the type of the result. \index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\subsubsection[{\texorpdfstring{Expr\+Attr(\+Var\+Address $\ast$addr)}{ExprAttr(VarAddress *addr)}}]{\setlength{\rightskip}{0pt plus 5cm}Expr\+Attr\+::\+Expr\+Attr (
+\begin{DoxyParamCaption}
+\item[{{\bf Var\+Address} $\ast$}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expr_attr_a7362196f3e62587f89134e23b8ee40fc}{}\label{class_expr_attr_a7362196f3e62587f89134e23b8ee40fc}
+Constructor for \hyperlink{class_expr_attr}{Expr\+Attr}; it will refer to the \hyperlink{class_address}{Address} of the variable. It will infer the type from the type of the variable. \index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\subsubsection[{\texorpdfstring{Expr\+Attr(\+Const\+Address $\ast$addr)}{ExprAttr(ConstAddress *addr)}}]{\setlength{\rightskip}{0pt plus 5cm}Expr\+Attr\+::\+Expr\+Attr (
+\begin{DoxyParamCaption}
+\item[{{\bf Const\+Address} $\ast$}]{addr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expr_attr_af2cb2432b6971074b082934a1065aaa0}{}\label{class_expr_attr_af2cb2432b6971074b082934a1065aaa0}
+Constructor for \hyperlink{class_expr_attr}{Expr\+Attr}; it will refer to a constant. It will infer the type from the type of the constant. \index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\index{Expr\+Attr@{Expr\+Attr}!Expr\+Attr@{Expr\+Attr}}
+\subsubsection[{\texorpdfstring{Expr\+Attr(\+Temp\+Address $\ast$addr, type\+Name type)}{ExprAttr(TempAddress *addr, typeName type)}}]{\setlength{\rightskip}{0pt plus 5cm}Expr\+Attr\+::\+Expr\+Attr (
+\begin{DoxyParamCaption}
+\item[{{\bf Temp\+Address} $\ast$}]{addr, }
+\item[{{\bf type\+Name}}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expr_attr_a61e2a36f551af4024b31c58b1185d7d2}{}\label{class_expr_attr_a61e2a36f551af4024b31c58b1185d7d2}
+Constructor for \hyperlink{class_expr_attr}{Expr\+Attr}; it will refer to a temporary, supposedly holding some variable. The type cannot be inferred, in ths case, so it must be explicitly provided. 
+
+\subsection{Member Function Documentation}
+\index{Expr\+Attr@{Expr\+Attr}!get\+Addr@{get\+Addr}}
+\index{get\+Addr@{get\+Addr}!Expr\+Attr@{Expr\+Attr}}
+\subsubsection[{\texorpdfstring{get\+Addr()}{getAddr()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Address}$\ast$ Expr\+Attr\+::get\+Addr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expr_attr_aec4263aec2979831b898773b0910bc95}{}\label{class_expr_attr_aec4263aec2979831b898773b0910bc95}
+Returns the E.\+addr attribute \index{Expr\+Attr@{Expr\+Attr}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Expr\+Attr@{Expr\+Attr}}
+\subsubsection[{\texorpdfstring{get\+Type()}{getType()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf type\+Name} Expr\+Attr\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_expr_attr_a17c309d7036192a6d15ebe3388dc0f34}{}\label{class_expr_attr_a17c309d7036192a6d15ebe3388dc0f34}
+Returns the E.\+type attribute 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

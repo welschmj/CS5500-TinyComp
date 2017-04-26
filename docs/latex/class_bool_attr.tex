@@ -1,0 +1,108 @@
+\hypertarget{class_bool_attr}{}\section{Bool\+Attr Class Reference}
+\label{class_bool_attr}\index{Bool\+Attr@{Bool\+Attr}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Bool\+Attr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bool_attr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_bool_attr_a9437deb583e3b6d353bc4cdc3a3ac003}{add\+True} (\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$instr)
+\item 
+void \hyperlink{class_bool_attr_aa7a71ac5b804c231b75d060e70d30adc}{add\+False} (\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$instr)
+\item 
+void \hyperlink{class_bool_attr_acc97b2c9d25818662e8c756d0f804523}{add\+True} (list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ l)
+\item 
+void \hyperlink{class_bool_attr_afb2abc67561365b8c7bd1469fa4ff8cd}{add\+False} (list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ l)
+\item 
+list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ \hyperlink{class_bool_attr_aaba8e988b2491bda9cf9f398f53bb0c3}{get\+Truelist} ()
+\item 
+list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ \hyperlink{class_bool_attr_a22d66b869b09203424020a5a3c4ceb37}{get\+Falselist} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of attribute for grammar symbol cond\+: boolean expressions
+\begin{DoxyItemize}
+\item B.\+truelist
+\item B.\+falselist 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{Bool\+Attr@{Bool\+Attr}!add\+False@{add\+False}}
+\index{add\+False@{add\+False}!Bool\+Attr@{Bool\+Attr}}
+\subsubsection[{\texorpdfstring{add\+False(\+Tac\+Instr $\ast$instr)}{addFalse(TacInstr *instr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bool\+Attr\+::add\+False (
+\begin{DoxyParamCaption}
+\item[{{\bf Tac\+Instr} $\ast$}]{instr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bool_attr_aa7a71ac5b804c231b75d060e70d30adc}{}\label{class_bool_attr_aa7a71ac5b804c231b75d060e70d30adc}
+Appends a 3-\/addr code instruction to the falselist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em instr} & The instruction to be appended; it is assumed to contain a \char`\"{}goto\char`\"{}-\/like operator. \\
+\hline
+\end{DoxyParams}
+\index{Bool\+Attr@{Bool\+Attr}!add\+False@{add\+False}}
+\index{add\+False@{add\+False}!Bool\+Attr@{Bool\+Attr}}
+\subsubsection[{\texorpdfstring{add\+False(list$<$ Tac\+Instr $\ast$ $>$ l)}{addFalse(list< TacInstr * > l)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bool\+Attr\+::add\+False (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf Tac\+Instr} $\ast$ $>$}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bool_attr_afb2abc67561365b8c7bd1469fa4ff8cd}{}\label{class_bool_attr_afb2abc67561365b8c7bd1469fa4ff8cd}
+Appends a list of instructions to the falselist. Basically, an implementation of merge() for a falselist. 
+\begin{DoxyParams}{Parameters}
+{\em l} & The list to be appended; it is assumed to contain only \char`\"{}goto\char`\"{}-\/like instructions. \\
+\hline
+\end{DoxyParams}
+\index{Bool\+Attr@{Bool\+Attr}!add\+True@{add\+True}}
+\index{add\+True@{add\+True}!Bool\+Attr@{Bool\+Attr}}
+\subsubsection[{\texorpdfstring{add\+True(\+Tac\+Instr $\ast$instr)}{addTrue(TacInstr *instr)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bool\+Attr\+::add\+True (
+\begin{DoxyParamCaption}
+\item[{{\bf Tac\+Instr} $\ast$}]{instr}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bool_attr_a9437deb583e3b6d353bc4cdc3a3ac003}{}\label{class_bool_attr_a9437deb583e3b6d353bc4cdc3a3ac003}
+Appends a 3-\/addr code instruction to the truelist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em instr} & The instruction to be appended; it is assumed to contain a \char`\"{}goto\char`\"{}-\/like operator. \\
+\hline
+\end{DoxyParams}
+\index{Bool\+Attr@{Bool\+Attr}!add\+True@{add\+True}}
+\index{add\+True@{add\+True}!Bool\+Attr@{Bool\+Attr}}
+\subsubsection[{\texorpdfstring{add\+True(list$<$ Tac\+Instr $\ast$ $>$ l)}{addTrue(list< TacInstr * > l)}}]{\setlength{\rightskip}{0pt plus 5cm}void Bool\+Attr\+::add\+True (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf Tac\+Instr} $\ast$ $>$}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bool_attr_acc97b2c9d25818662e8c756d0f804523}{}\label{class_bool_attr_acc97b2c9d25818662e8c756d0f804523}
+Appends a list of instructions to the truelist. Basically, an implementation of merge() for a truelist. 
+\begin{DoxyParams}{Parameters}
+{\em l} & The list to be appended; it is assumed to contain only \char`\"{}goto\char`\"{}-\/like instructions. \\
+\hline
+\end{DoxyParams}
+\index{Bool\+Attr@{Bool\+Attr}!get\+Falselist@{get\+Falselist}}
+\index{get\+Falselist@{get\+Falselist}!Bool\+Attr@{Bool\+Attr}}
+\subsubsection[{\texorpdfstring{get\+Falselist()}{getFalselist()}}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf Tac\+Instr}$\ast$$>$ Bool\+Attr\+::get\+Falselist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bool_attr_a22d66b869b09203424020a5a3c4ceb37}{}\label{class_bool_attr_a22d66b869b09203424020a5a3c4ceb37}
+Returns the falselist. \index{Bool\+Attr@{Bool\+Attr}!get\+Truelist@{get\+Truelist}}
+\index{get\+Truelist@{get\+Truelist}!Bool\+Attr@{Bool\+Attr}}
+\subsubsection[{\texorpdfstring{get\+Truelist()}{getTruelist()}}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf Tac\+Instr}$\ast$$>$ Bool\+Attr\+::get\+Truelist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_bool_attr_aaba8e988b2491bda9cf9f398f53bb0c3}{}\label{class_bool_attr_aaba8e988b2491bda9cf9f398f53bb0c3}
+Returns the truelist. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

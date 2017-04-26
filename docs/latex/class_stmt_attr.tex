@@ -1,0 +1,61 @@
+\hypertarget{class_stmt_attr}{}\section{Stmt\+Attr Class Reference}
+\label{class_stmt_attr}\index{Stmt\+Attr@{Stmt\+Attr}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Stmt\+Attr\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stmt_attr}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_stmt_attr_aa033b133103d91245cd078b95803f398}{add\+Next} (\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$)
+\item 
+void \hyperlink{class_stmt_attr_a75a9fbaf6c796c0a42a9b6be18c7bb58}{add\+Next} (list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ l)
+\item 
+list$<$ \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$ $>$ \hyperlink{class_stmt_attr_aa76b432ceb444453f8d4386cfb6ea1f0}{get\+Nextlist} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implementation of attribute for grammar symbol stmt\+: a generic statement.
+\begin{DoxyItemize}
+\item S.\+nextlist 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\index{Stmt\+Attr@{Stmt\+Attr}!add\+Next@{add\+Next}}
+\index{add\+Next@{add\+Next}!Stmt\+Attr@{Stmt\+Attr}}
+\subsubsection[{\texorpdfstring{add\+Next(\+Tac\+Instr $\ast$)}{addNext(TacInstr *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Stmt\+Attr\+::add\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Tac\+Instr} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_stmt_attr_aa033b133103d91245cd078b95803f398}{}\label{class_stmt_attr_aa033b133103d91245cd078b95803f398}
+Appends an instruction to the nextlist \index{Stmt\+Attr@{Stmt\+Attr}!add\+Next@{add\+Next}}
+\index{add\+Next@{add\+Next}!Stmt\+Attr@{Stmt\+Attr}}
+\subsubsection[{\texorpdfstring{add\+Next(list$<$ Tac\+Instr $\ast$ $>$ l)}{addNext(list< TacInstr * > l)}}]{\setlength{\rightskip}{0pt plus 5cm}void Stmt\+Attr\+::add\+Next (
+\begin{DoxyParamCaption}
+\item[{list$<$ {\bf Tac\+Instr} $\ast$ $>$}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{class_stmt_attr_a75a9fbaf6c796c0a42a9b6be18c7bb58}{}\label{class_stmt_attr_a75a9fbaf6c796c0a42a9b6be18c7bb58}
+Appends a list of instructions to the next list. Basically, an implementation of merge() for a nextlist. 
+\begin{DoxyParams}{Parameters}
+{\em l} & The list to be appended; it is assumed to contain only \char`\"{}goto\char`\"{}-\/like instructions. \\
+\hline
+\end{DoxyParams}
+\index{Stmt\+Attr@{Stmt\+Attr}!get\+Nextlist@{get\+Nextlist}}
+\index{get\+Nextlist@{get\+Nextlist}!Stmt\+Attr@{Stmt\+Attr}}
+\subsubsection[{\texorpdfstring{get\+Nextlist()}{getNextlist()}}]{\setlength{\rightskip}{0pt plus 5cm}list$<${\bf Tac\+Instr}$\ast$$>$ Stmt\+Attr\+::get\+Nextlist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_stmt_attr_aa76b432ceb444453f8d4386cfb6ea1f0}{}\label{class_stmt_attr_aa76b432ceb444453f8d4386cfb6ea1f0}
+Returns the nextlist. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

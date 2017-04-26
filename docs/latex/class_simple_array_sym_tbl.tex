@@ -1,0 +1,112 @@
+\hypertarget{class_simple_array_sym_tbl}{}\section{Simple\+Array\+Sym\+Tbl Class Reference}
+\label{class_simple_array_sym_tbl}\index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Simple\+Array\+Sym\+Tbl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_simple_array_sym_tbl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_simple_array_sym_tbl_a66b279785f28f0aefbaa0230792ef94a}{Simple\+Array\+Sym\+Tbl} ()
+\item 
+\hyperlink{class_var_address}{Var\+Address} $\ast$ \hyperlink{class_simple_array_sym_tbl_a28d6d5c513f7b8f2beee3a0cf6eab45b}{get} (const char $\ast$lexeme)
+\item 
+\hyperlink{class_var_address}{Var\+Address} $\ast$ \hyperlink{class_simple_array_sym_tbl_a56a8105f91e5436d8396ed57a374ed5f}{get} (char lexeme)
+\item 
+void \hyperlink{class_simple_array_sym_tbl_ac7a485531efeaf7b6ac6b5215e212a37}{put} (const char $\ast$lexeme, \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} type)
+\item 
+void \hyperlink{class_simple_array_sym_tbl_a12e8b965e1d43cf9b037c262d0400295}{put} (char lexeme, \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} type)
+\item 
+void $\ast$ \hyperlink{class_simple_array_sym_tbl_a2f8a29297406612782319c8b069ce17a}{get\+Var\+Value} (char lexeme)
+\item 
+void \hyperlink{class_simple_array_sym_tbl_aa96c422e9a48887d1756d1b13d2f41d3}{print\+Out} ()
+\item 
+void \hyperlink{class_simple_array_sym_tbl_af761f997d593f4da432a8ba448b4fae2}{print\+Memory} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A simple implementation for a symbol table. I assume here that var id\textquotesingle{}s are 1-\/char long, so the table is just an array with 26 entries. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{Simple\+Array\+Sym\+Tbl()}{SimpleArraySymTbl()}}]{\setlength{\rightskip}{0pt plus 5cm}Simple\+Array\+Sym\+Tbl\+::\+Simple\+Array\+Sym\+Tbl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_simple_array_sym_tbl_a66b279785f28f0aefbaa0230792ef94a}{}\label{class_simple_array_sym_tbl_a66b279785f28f0aefbaa0230792ef94a}
+Constructor for the \hyperlink{class_simple_array_sym_tbl}{Simple\+Array\+Sym\+Tbl} class Basically, it just initializes all entries in the table to N\+U\+LL 
+
+\subsection{Member Function Documentation}
+\index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!get@{get}}
+\index{get@{get}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{get(const char $\ast$lexeme)}{get(const char *lexeme)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Var\+Address}$\ast$ Simple\+Array\+Sym\+Tbl\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{lexeme}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_simple_array_sym_tbl_a28d6d5c513f7b8f2beee3a0cf6eab45b}{}\label{class_simple_array_sym_tbl_a28d6d5c513f7b8f2beee3a0cf6eab45b}
+Returns an entry, indexed by its lexeme 
+
+Implements \hyperlink{class_sym_tbl_a7cdd50cd38f3eecf23c9e6ce0c1696da}{Sym\+Tbl}.
+
+\index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!get@{get}}
+\index{get@{get}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{get(char lexeme)}{get(char lexeme)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Var\+Address}$\ast$ Simple\+Array\+Sym\+Tbl\+::get (
+\begin{DoxyParamCaption}
+\item[{char}]{lexeme}
+\end{DoxyParamCaption}
+)}\hypertarget{class_simple_array_sym_tbl_a56a8105f91e5436d8396ed57a374ed5f}{}\label{class_simple_array_sym_tbl_a56a8105f91e5436d8396ed57a374ed5f}
+Returns an entry, indexed by its lexeme (1-\/char version) \index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!get\+Var\+Value@{get\+Var\+Value}}
+\index{get\+Var\+Value@{get\+Var\+Value}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{get\+Var\+Value(char lexeme)}{getVarValue(char lexeme)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Simple\+Array\+Sym\+Tbl\+::get\+Var\+Value (
+\begin{DoxyParamCaption}
+\item[{char}]{lexeme}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_simple_array_sym_tbl_a2f8a29297406612782319c8b069ce17a}{}\label{class_simple_array_sym_tbl_a2f8a29297406612782319c8b069ce17a}
+Returns the value of a variable by first recovering the offset, and then accessing the memory. Since we don\textquotesingle{}t know the type to be returned, a (void$\ast$) is used. \index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!print\+Memory@{print\+Memory}}
+\index{print\+Memory@{print\+Memory}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{print\+Memory()}{printMemory()}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Array\+Sym\+Tbl\+::print\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_simple_array_sym_tbl_af761f997d593f4da432a8ba448b4fae2}{}\label{class_simple_array_sym_tbl_af761f997d593f4da432a8ba448b4fae2}
+Prints out a logical view of the memory \index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!print\+Out@{print\+Out}}
+\index{print\+Out@{print\+Out}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{print\+Out()}{printOut()}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Array\+Sym\+Tbl\+::print\+Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_simple_array_sym_tbl_aa96c422e9a48887d1756d1b13d2f41d3}{}\label{class_simple_array_sym_tbl_aa96c422e9a48887d1756d1b13d2f41d3}
+Prints out the symbl table \index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!put@{put}}
+\index{put@{put}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{put(const char $\ast$lexeme, type\+Name type)}{put(const char *lexeme, typeName type)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Array\+Sym\+Tbl\+::put (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{lexeme, }
+\item[{{\bf type\+Name}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_simple_array_sym_tbl_ac7a485531efeaf7b6ac6b5215e212a37}{}\label{class_simple_array_sym_tbl_ac7a485531efeaf7b6ac6b5215e212a37}
+Stores a variable in the symbol table, given its lexeme and type 
+
+Implements \hyperlink{class_sym_tbl_a116640842b4776c1bacc6292b3015078}{Sym\+Tbl}.
+
+\index{Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}!put@{put}}
+\index{put@{put}!Simple\+Array\+Sym\+Tbl@{Simple\+Array\+Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{put(char lexeme, type\+Name type)}{put(char lexeme, typeName type)}}]{\setlength{\rightskip}{0pt plus 5cm}void Simple\+Array\+Sym\+Tbl\+::put (
+\begin{DoxyParamCaption}
+\item[{char}]{lexeme, }
+\item[{{\bf type\+Name}}]{type}
+\end{DoxyParamCaption}
+)}\hypertarget{class_simple_array_sym_tbl_a12e8b965e1d43cf9b037c262d0400295}{}\label{class_simple_array_sym_tbl_a12e8b965e1d43cf9b037c262d0400295}
+Stores a variable in the symbol table, given its lexeme (1-\/char version) and type 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

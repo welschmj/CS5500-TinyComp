@@ -1,0 +1,10 @@
+int a, b, c;
+float d;
+fraction f, e;
+stat;
+a := 5;
+b := 4;
+d := 3.4;
+f := 3|4;
+e := 3|4;
+while(f = e) { b := 3; }

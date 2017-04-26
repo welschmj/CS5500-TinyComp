@@ -1,0 +1,89 @@
+\hypertarget{class_tac_instr}{}\section{Tac\+Instr Class Reference}
+\label{class_tac_instr}\index{Tac\+Instr@{Tac\+Instr}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tac_instr_ab607b7ce5c1f93748859e801eb6583a1}{Tac\+Instr} (\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{opr\+Enum} op, \hyperlink{class_address}{Address} $\ast$operand1, \hyperlink{class_address}{Address} $\ast$operand2, \hyperlink{class_address}{Address} $\ast$operand3)
+\item 
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{opr\+Enum} \hyperlink{class_tac_instr_afdf3f5b13808a3e8a73cfb8475f770e3}{get\+Op} () const 
+\item 
+\hyperlink{class_instr_address}{Instr\+Address} $\ast$ \hyperlink{class_tac_instr_ac4d3bc015e93338b0bba8af680576e30}{get\+Value\+Number} ()
+\item 
+void \hyperlink{class_tac_instr_a6e6955830a1420096bfc53be040675e9}{patch} (\hyperlink{class_tac_instr}{Tac\+Instr} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Target\+Code}\hypertarget{class_tac_instr_a4a2d7047235cb01678f9f261600e3865}{}\label{class_tac_instr_a4a2d7047235cb01678f9f261600e3865}
+
+\item 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&, const \hyperlink{class_tac_instr}{Tac\+Instr} $\ast$)\hypertarget{class_tac_instr_a4497e4e38cff2ae7a1d600ee5e79bf87}{}\label{class_tac_instr_a4497e4e38cff2ae7a1d600ee5e79bf87}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A generic three-\/address code instruction. It will store\+:
+\begin{DoxyItemize}
+\item the instruction\textquotesingle{}s valuenumber
+\item the operator \begin{DoxySeeAlso}{See also}
+\hyperlink{tinycomp_8h_a042125b56c7cb23c8c11e3aeb8de20cc}{opr\+Enum} 
+\end{DoxySeeAlso}
+
+\end{DoxyItemize}
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Tac\+Instr@{Tac\+Instr}!Tac\+Instr@{Tac\+Instr}}
+\index{Tac\+Instr@{Tac\+Instr}!Tac\+Instr@{Tac\+Instr}}
+\subsubsection[{\texorpdfstring{Tac\+Instr(opr\+Enum op, Address $\ast$operand1, Address $\ast$operand2, Address $\ast$operand3)}{TacInstr(oprEnum op, Address *operand1, Address *operand2, Address *operand3)}}]{\setlength{\rightskip}{0pt plus 5cm}Tac\+Instr\+::\+Tac\+Instr (
+\begin{DoxyParamCaption}
+\item[{{\bf opr\+Enum}}]{op, }
+\item[{{\bf Address} $\ast$}]{operand1, }
+\item[{{\bf Address} $\ast$}]{operand2, }
+\item[{{\bf Address} $\ast$}]{operand3}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tac_instr_ab607b7ce5c1f93748859e801eb6583a1}{}\label{class_tac_instr_ab607b7ce5c1f93748859e801eb6583a1}
+Constructor of a 3-\/address code instruction. The result is internally stored as an \hyperlink{class_instr_address}{Instr\+Address} representing the value number (e.\+g corresponding to an index to the code array) 
+\begin{DoxyParams}{Parameters}
+{\em op} & The operator for this instruction, as an opr\+Enum \\
+\hline
+{\em operand1} & The first operand, as a generic \hyperlink{class_address}{Address} \\
+\hline
+{\em operand2} & The second operand (may be N\+U\+LL for operators that do not require 2 operands) \\
+\hline
+{\em operand3} & Holds a temporary, when explicitly needed to specify the address result, depending on the operation \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{Tac\+Instr@{Tac\+Instr}!get\+Op@{get\+Op}}
+\index{get\+Op@{get\+Op}!Tac\+Instr@{Tac\+Instr}}
+\subsubsection[{\texorpdfstring{get\+Op() const }{getOp() const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opr\+Enum} Tac\+Instr\+::get\+Op (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\hypertarget{class_tac_instr_afdf3f5b13808a3e8a73cfb8475f770e3}{}\label{class_tac_instr_afdf3f5b13808a3e8a73cfb8475f770e3}
+Returns the enum representing the operator of this specific instruction \index{Tac\+Instr@{Tac\+Instr}!get\+Value\+Number@{get\+Value\+Number}}
+\index{get\+Value\+Number@{get\+Value\+Number}!Tac\+Instr@{Tac\+Instr}}
+\subsubsection[{\texorpdfstring{get\+Value\+Number()}{getValueNumber()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instr\+Address}$\ast$ Tac\+Instr\+::get\+Value\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tac_instr_ac4d3bc015e93338b0bba8af680576e30}{}\label{class_tac_instr_ac4d3bc015e93338b0bba8af680576e30}
+Returns the \hyperlink{class_instr_address}{Instr\+Address} representing the value number \index{Tac\+Instr@{Tac\+Instr}!patch@{patch}}
+\index{patch@{patch}!Tac\+Instr@{Tac\+Instr}}
+\subsubsection[{\texorpdfstring{patch(\+Tac\+Instr $\ast$)}{patch(TacInstr *)}}]{\setlength{\rightskip}{0pt plus 5cm}void Tac\+Instr\+::patch (
+\begin{DoxyParamCaption}
+\item[{{\bf Tac\+Instr} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_tac_instr_a6e6955830a1420096bfc53be040675e9}{}\label{class_tac_instr_a6e6955830a1420096bfc53be040675e9}
+For backpathcing \char`\"{}goto\char`\"{}-\/like instructions 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}

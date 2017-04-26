@@ -1,0 +1,91 @@
+\hypertarget{class_sym_tbl}{}\section{Sym\+Tbl Class Reference}
+\label{class_sym_tbl}\index{Sym\+Tbl@{Sym\+Tbl}}
+
+
+{\ttfamily \#include $<$tinycomp.\+hpp$>$}
+
+Inheritance diagram for Sym\+Tbl\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sym_tbl}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_var_address}{Var\+Address} $\ast$ \hyperlink{class_sym_tbl_a7cdd50cd38f3eecf23c9e6ce0c1696da}{get} (const char $\ast$lexeme)=0
+\item 
+virtual void \hyperlink{class_sym_tbl_a116640842b4776c1bacc6292b3015078}{put} (const char $\ast$lexeme, \hyperlink{tinycomp_8h_aca554671f4620139c1393f96d2af74bc}{type\+Name} type)=0
+\item 
+void \hyperlink{class_sym_tbl_a97e36880f52532dfac7367b2034e3346}{print\+Out} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_memory}{Memory} \& \hyperlink{class_sym_tbl_aacdfc3edb6f9bd947ea5bc7b5b695757}{mem} = \hyperlink{class_memory_a96eac3970b3baba973645a9cc32aee4c}{Memory\+::get\+Instance}()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Memory\+::print\+Out} (\hyperlink{class_sym_tbl}{Sym\+Tbl} $\ast$tbl)\hypertarget{class_sym_tbl_ad9233821b14854177e4680a1ccad4f29}{}\label{class_sym_tbl_ad9233821b14854177e4680a1ccad4f29}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An abstraction for the Symbol Table 
+
+\subsection{Member Function Documentation}
+\index{Sym\+Tbl@{Sym\+Tbl}!get@{get}}
+\index{get@{get}!Sym\+Tbl@{Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{get(const char $\ast$lexeme)=0}{get(const char *lexeme)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Var\+Address}$\ast$ Sym\+Tbl\+::get (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{lexeme}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_sym_tbl_a7cdd50cd38f3eecf23c9e6ce0c1696da}{}\label{class_sym_tbl_a7cdd50cd38f3eecf23c9e6ce0c1696da}
+Pure virtual method; retrieves a variable from the symbol table. 
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & The lexeme used as a key to access the symbol table \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_simple_array_sym_tbl_a28d6d5c513f7b8f2beee3a0cf6eab45b}{Simple\+Array\+Sym\+Tbl}.
+
+\index{Sym\+Tbl@{Sym\+Tbl}!print\+Out@{print\+Out}}
+\index{print\+Out@{print\+Out}!Sym\+Tbl@{Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{print\+Out()}{printOut()}}]{\setlength{\rightskip}{0pt plus 5cm}void Sym\+Tbl\+::print\+Out (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_sym_tbl_a97e36880f52532dfac7367b2034e3346}{}\label{class_sym_tbl_a97e36880f52532dfac7367b2034e3346}
+Prints out the symbol table \index{Sym\+Tbl@{Sym\+Tbl}!put@{put}}
+\index{put@{put}!Sym\+Tbl@{Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{put(const char $\ast$lexeme, type\+Name type)=0}{put(const char *lexeme, typeName type)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sym\+Tbl\+::put (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{lexeme, }
+\item[{{\bf type\+Name}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_sym_tbl_a116640842b4776c1bacc6292b3015078}{}\label{class_sym_tbl_a116640842b4776c1bacc6292b3015078}
+Pure virtual method; stores a variable into the symbol table. 
+\begin{DoxyParams}{Parameters}
+{\em lexeme} & The lexeme used as a key to access the symbol table \\
+\hline
+{\em type} & The type of the lexeme \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_simple_array_sym_tbl_ac7a485531efeaf7b6ac6b5215e212a37}{Simple\+Array\+Sym\+Tbl}.
+
+
+
+\subsection{Field Documentation}
+\index{Sym\+Tbl@{Sym\+Tbl}!mem@{mem}}
+\index{mem@{mem}!Sym\+Tbl@{Sym\+Tbl}}
+\subsubsection[{\texorpdfstring{mem}{mem}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Memory}\& Sym\+Tbl\+::mem = {\bf Memory\+::get\+Instance}()\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_sym_tbl_aacdfc3edb6f9bd947ea5bc7b5b695757}{}\label{class_sym_tbl_aacdfc3edb6f9bd947ea5bc7b5b695757}
+A reference to the (simulated) memory 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{tinycomp_8hpp}{tinycomp.\+hpp}\end{DoxyCompactItemize}
